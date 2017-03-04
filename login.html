@@ -160,10 +160,16 @@ login.onclick = function( event ) {
 	var eman = $('#name').val();
 	var ssap = $('#pass').val();
 
+
 if (eman == "" || ssap == ""){
 	return;
 }
 
+	
+	eman = $.trim(eman);
+	ssap = $.trim(ssap);
+	eman = eman.toLowerCase();
+	ssap = ssap.toLowerCase();
 var noitacol = 'poiuytrewqPOIUYTREWQ' + ssap+ 'lkjhgfdsaLKJHGFDSA' + eman + 'mnbvcxzMNBVCXZ.html'
 window.location.href= noitacol;
 
